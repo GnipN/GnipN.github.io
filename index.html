@@ -22,8 +22,8 @@
           }.bind(this));
 
           marker.addEventListener('markerLost', function () {
-            this.vid.pause();
-            this.vid.currentTime = 0;
+            //this.vid.pause();
+            //this.vid.currentTime = 0;
           }.bind(this));
         }
       });
@@ -67,14 +67,10 @@
     <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
 
     <a-assets>
-      <video src="PUV3cprss.mp4" 
-        preload="auto" id="vid" response-type="arraybuffer" loop
-        crossorigin webkit-playsinline autoplay muted playsinline> </video>
+      <video src="PUV3cprss.mp4" id="vid" loop="true"> </video>
     </a-assets>
 
-    <a-nft 
-      
-      type="nft" url="ar/descriptors/child" smooth="true" smoothCount="10" smoothTolerance=".01"
+    <a-nft type="nft" url="ar/descriptors/child" smooth="true" smoothCount="10" smoothTolerance=".01"
       smoothThreshold="5">
 
       <a-video src="#vid" position='50 150 -100' rotation='90 0 180' width='300' height='175'>
